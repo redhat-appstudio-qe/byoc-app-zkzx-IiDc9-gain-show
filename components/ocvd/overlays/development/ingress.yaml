@@ -1,0 +1,25 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  creationTimestamp: null
+  labels:
+    app.kubernetes.io/created-by: application-service
+    app.kubernetes.io/instance: ocvd
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/name: ocvd
+    app.kubernetes.io/part-of: byoc-app-zkzx
+  name: ocvd
+spec:
+  rules:
+  - host: ocvd-byoc-nzpb-tenant.apps.b4db358ff2ae14ddf790.hypershift.aws-2.ci.openshift.org
+    http:
+      paths:
+      - backend:
+          service:
+            name: ocvd
+            port:
+              number: 8081
+        path: /
+        pathType: ImplementationSpecific
+status:
+  loadBalancer: {}
