@@ -25,7 +25,7 @@ spec:
         app.kubernetes.io/instance: ocvd
     spec:
       containers:
-      - image: java-quarkus-image:latest
+      - image: quay.io/redhat-appstudio-qe/byoc-nzpb-tenant/byoc-app-zkzx/ocvd@sha256:6791d2018ed04fc974046b201de362526426eb986bc5ceecf47d062ec67e66b4
         name: my-java-quarkus
         ports:
         - containerPort: 8081
